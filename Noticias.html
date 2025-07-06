@@ -8,10 +8,46 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #121212;
       color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* PANEL DE NAVEGACIÓN */
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: sans-serif;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .spacer {
+      height: 30px;
+    }
+
+    /* CONTENIDO ACORDEÓN */
+    .main-container {
       padding: 40px;
       max-width: 700px;
       margin: auto;
     }
+
     .accordion {
       background-color: #2563eb;
       color: white;
@@ -27,12 +63,15 @@
       margin-bottom: 10px;
       user-select: none;
     }
+
     .accordion:hover {
       background-color: #1d4ed8;
     }
+
     .active, .accordion:focus {
       background-color: #1e40af;
     }
+
     .panel {
       background-color: #1f2937;
       padding: 15px 20px;
@@ -44,15 +83,18 @@
       margin-bottom: 15px;
       user-select: text;
     }
+
     .news-date {
       font-size: 0.9rem;
       color: #9ca3af;
       margin-bottom: 10px;
     }
+
     .news-summary {
       font-size: 1rem;
       line-height: 1.5;
     }
+
     .note {
       font-size: 0.85rem;
       color: #94a3b8;
@@ -65,26 +107,46 @@
 </head>
 <body>
 
-  <h1 style="text-align:center; margin-bottom: 30px; color: #60a5fa;">Historial de Noticias</h1>
+  <!-- PANEL DE NAVEGACIÓN -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Noticias.html">Noticias</a>
+    <a href="Aboutme.html">Sobre mí</a>
+  </nav>
 
-  <button class="accordion">30 de Junio, 2025 - Muchos cambios en la página</button>
-  <div class="panel">
-    <div class="news-date">30 de Junio, 2025</div>
-    <div class="news-summary">
-      Ando haciendo muchos cambios a la página para mejorar la experiencia, agregar nuevas secciones y optimizar el diseño. ¡Pronto habrá más novedades!
+  <div class="spacer"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-container">
+    <h1 style="text-align:center; margin-bottom: 30px; color: #60a5fa;">Historial de Noticias</h1>
+
+    <button class="accordion">6 de Julio, 2025 - Migración de Weebly a GitHub Pages</button>
+    <div class="panel">
+      <div class="news-date">6 de Julio, 2025</div>
+      <div class="news-summary">
+        Hemos migrado nuestro sitio de Weebly a GitHub Pages para obtener mayor libertad, mejor rendimiento y control total sobre el código. ¡Ahora la web es más rápida y personalizada! Sigue visitándonos para más novedades.
+      </div>
     </div>
-  </div>
 
-  <button class="accordion">29 de Junio, 2025 - Primeras Partes de la Página</button>
-  <div class="panel">
-    <div class="news-date">29 de Junio, 2025</div>
-    <div class="news-summary">
-      Estamos emocionados de anunciar que las primeras partes de la página web están listas para ser exploradas y disfrutadas. Aún queda trabajo por delante, pero este es un gran avance. ¡Gracias por tu paciencia y apoyo!
+    <button class="accordion">30 de Junio, 2025 - Muchos cambios en la página</button>
+    <div class="panel">
+      <div class="news-date">30 de Junio, 2025</div>
+      <div class="news-summary">
+        Ando haciendo muchos cambios a la página para mejorar la experiencia, agregar nuevas secciones y optimizar el diseño. ¡Pronto habrá más novedades!
+      </div>
     </div>
-  </div>
 
-  <div class="note">
-    Nota: Si se acumulan muchas noticias, se eliminarán las más antiguas por razones de comodidad y para mantener la página ligera.
+    <button class="accordion">29 de Junio, 2025 - Primeras Partes de la Página</button>
+    <div class="panel">
+      <div class="news-date">29 de Junio, 2025</div>
+      <div class="news-summary">
+        Estamos emocionados de anunciar que las primeras partes de la página web están listas para ser exploradas y disfrutadas. Aún queda trabajo por delante, pero este es un gran avance. ¡Gracias por tu paciencia y apoyo!
+      </div>
+    </div>
+
+    <div class="note">
+      Nota: Si se acumulan muchas noticias, se eliminarán las más antiguas por razones de comodidad y para mantener la página ligera.
+    </div>
   </div>
 
   <script>
