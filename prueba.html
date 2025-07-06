@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prueba Panel</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #12121f;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .spacer {
+      height: 30px;
+    }
+
+    .container {
+      padding: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Noticias.html">Noticias</a>
+    <a href="Aboutme.html">Sobre mí</a>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <div class="container">
+    <h1>¿Ves este panel arriba?</h1>
+    <p>Si ves los botones “Inicio, Noticias, Sobre mí” arriba, funciona bien 😄</p>
+  </div>
+
+</body>
+</html>
