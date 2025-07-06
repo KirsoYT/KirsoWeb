@@ -2,20 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Zona de Juegos - Mantenimiento</title>
+  <title>Zona de Juegos</title>
   <style>
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #e0e7ff;
+      background-color: #12121f;
+      color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
-    /* PANEL DE NAVEGACIÓN */
+    /* PANEL DE NAVEGACIÓN PRINCIPAL */
     nav {
       background-color: #1a1a1a;
       padding: 15px;
@@ -32,7 +29,6 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-family: sans-serif;
       transition: color 0.2s;
     }
 
@@ -40,41 +36,167 @@
       color: #00ffff;
     }
 
-    /* PANEL ZONA DE JUEGOS */
-    .navbar-juegos-container {
-      background-color: #1e3a8a;
-      padding: 12px 24px;
-      box-shadow: 0 3px 6px #00000080;
+    .spacer {
+      height: 30px;
+    }
+
+    /* ZONA DE JUEGOS */
+    .titulo-zona-juegos {
+      font-size: 3.5rem;
+      font-weight: 900;
       text-align: center;
-      position: sticky;
-      top: 56px;
-      z-index: 999;
+      margin: 40px 0 20px 0;
+      background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow:
+        0 0 10px rgba(59, 130, 246, 0.8),
+        0 0 20px rgba(96, 165, 250, 0.6);
+      user-select: none;
     }
 
-    .navbar-title {
-      margin: 0 0 12px 0;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 28px;
-      color: #fbbf24;
-      text-shadow: 1px 1px 3px #000;
+    .botones-navegacion {
+      text-align: center;
+      margin-bottom: 40px;
+      gap: 20px;
+      display: inline-flex;
     }
 
-    .navbar-juegos {
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar-juegos a {
-      color: #fff;
-      font-weight: 600;
+    .btn-nav {
+      background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+      color: white;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 12px;
       text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      background-color: #3b82f6;
-      transition: background 0.3s, color 0.3s;
-      box-shadow: inset 0 -3px 0 #2563eb;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(96, 165, 250, 0.6);
+      user-select: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .navbar-juegos a:hover,
-    .navbar-juegos a.active {
+    .btn-nav:hover {
+      background: linear-gradient(90deg, #1d4ed8, #2563eb, #3b82f6);
+      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.8);
+    }
+
+    .gamejolt-box {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      margin: 30px auto;
+    }
+
+    .gamejolt-box a {
+      color: #00ffcc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .gamejolt-box a:hover {
+      text-decoration: underline;
+    }
+
+    .contenido {
+      max-width: 900px;
+      margin: auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .titulo-zona-juegos {
+        font-size: 2.5rem;
+        margin: 30px 0 20px 0;
+      }
+
+      .botones-navegacion {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+        align-items: center;
+      }
+
+      .btn-nav {
+        font-size: 1rem;
+        padding: 10px 24px;
+        width: 140px;
+        text-align: center;
+      }
+    }
+
+    /* BOTÓN ESTILO MINECRAFT */
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    .btn-ver {
+      display: inline-block;
+      background: linear-gradient(135deg, #5aa748, #3e8e41);
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      box-shadow:
+        0 4px 0 #2e5e28,
+        0 0 10px rgba(34, 139, 34, 0.6);
+      transition: all 0.3s ease;
+      user-select: none;
+      cursor: pointer;
+      text-align: center;
+      margin: 40px auto 60px;
+    }
+
+    .btn-ver:hover {
+      background: linear-gradient(135deg, #6ac84b, #4da34c);
+      box-shadow:
+        0 6px 0 #2e5e28,
+        0 0 16px rgba(50, 205, 50, 0.8);
+      color: #dfffe2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PANEL DE NAVEGACIÓN GENERAL -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Noticias.html">Noticias</a>
+    <a href="Aboutme.html">Sobre mí</a>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <!-- ZONA DE JUEGOS -->
+  <h1 class="titulo-zona-juegos">□ Zona de Juegos</h1>
+
+  <div class="botones-navegacion">
+    <a href="juegos.html" class="btn-nav">Inicio</a>
+    <a href="JuegosT.html" class="btn-nav">Torneos</a>
+  </div>
+
+  <!-- PERFIL GAMEJOLT -->
+  <div class="gamejolt-box">
+    <h3>Mis juegos en GameJolt</h3>
+    <p>□ ¡Explora mis proyectos, demos y minijuegos!</p>
+    <a href="https://gamejolt.com/@Kirso" target="_blank">➡ Ir a mi perfil</a>
+  </div>
+
+  <!-- BOTÓN MINECRAFT -->
+  <div style="text-align:center;">
+    <a href="InfoMC.html" class="btn-ver">Ver Relacionado a Minecraft</a>
+  </div>
+
+  <!-- CONTENIDO OPCIONAL -->
+  <div class="contenido">
+    <p>Aquí puedes añadir más contenido sobre tus juegos o torneos si lo deseas.</p>
+  </div>
+
+</body>
+</html>
+
 
