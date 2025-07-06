@@ -1,0 +1,202 @@
+<!-- ESTILOS DE ACORDEONES Y PROYECTO -->
+<style>
+  .accordion {
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 700px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 10px auto 0 auto;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.7);
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion:hover,
+  .accordion.active {
+    background-color: #1e40af;
+  }
+
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f0f9ff;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    padding: 0 24px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .panel.show {
+    max-height: 1000px;
+    padding: 16px 24px;
+  }
+
+  .accordion-proyecto {
+    background-color: #10b981;
+    color: white;
+    cursor: pointer;
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 700px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 10px auto;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.7);
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-proyecto:hover,
+  .accordion-proyecto.active {
+    background-color: #059669;
+  }
+
+  .accordion-proyecto.destacado {
+    background-color: #dc2626;
+    color: white;
+    animation: pulse 1.2s infinite;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.8);
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  .panel-proyecto {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #d1fae5;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    padding: 0 24px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    font-size: 1rem;
+    color: #065f46;
+    line-height: 1.5;
+  }
+
+  .panel-proyecto.show {
+    max-height: 1000px;
+    padding: 16px 24px;
+  }
+</style>
+
+<!-- BOTONES ACORDEÓN -->
+<button id="btnTorneos" class="accordion" aria-expanded="false" aria-controls="panelTorneos" tabindex="0">
+  Torneos
+</button>
+<div id="panelTorneos" class="panel" aria-hidden="true">
+  <p>
+    ¡Atención! Ya hay un torneo próximo programado.<br>
+    Consulta la sección <strong>Proyecto: Kirso</strong> para más detalles.<br>
+    ¡Prepárate y no te lo pierdas!
+  </p>
+  <ul style="text-align:left; margin-top:10px;">
+    <li><strong>19 de julio 2025</strong> – Torneo Kirso en Forsaken y otros juegos</li>
+  </ul>
+</div>
+
+<button id="btnKirso" class="accordion-proyecto" aria-expanded="false" aria-controls="panelKirso" tabindex="0">
+  Proyecto: Kirso
+</button>
+<div id="panelKirso" class="panel-proyecto" aria-hidden="true">
+  <p>
+    ¡Prepárate para el próximo gran torneo en Roblox!<br><br>
+
+    □ <strong>Próximos fines de semana sugeridos para este evento (solo sábados):</strong><br>
+    • Sábado 19 de julio 2025<br>
+    • Sábado 26 de julio 2025<br>
+    • Sábado 2 de agosto 2025<br>
+    • Sábado 9 de agosto 2025<br><br>
+
+    □ <strong>Hora de inicio:</strong> 18:00 (GMT-4 / Chile)<br>
+    □ <strong>Hora estimada de término:</strong> 20:00 – 21:00<br><br>
+
+    □ <strong>Juegos confirmados:</strong><br>
+    1. ⚔️ <strong>Forsaken</strong> – Eliminaciones y decisiones por ronda<br>
+    2. □ <strong>The Strongest Battlegrounds</strong> – Peleas 1v1 o todos contra todos<br>
+    3. □ <strong>Epic Minigames</strong> – Minijuegos en servidor VIP y eliminación<br><br>
+
+    Yo, como organizador, elegiré en cuál de los juegos se juega cada ronda.<br><br>
+
+    <strong>Cómo participar:</strong><br>
+    Inscríbete dejando un comentario en el video oficial con tu usuario o nickname de Roblox.<br>
+    <strong>Importante:</strong> Revisa los juegos antes del torneo. Me conectaré 30 minutos antes en uno de ellos para iniciar.<br><br>
+
+    <strong>Ausencias y sustitutos:</strong><br>
+    Si no puedes participar en tu ronda por un compromiso importante, puedes pedir que alguien te reemplace. Solo avísame con anticipación y dime su usuario de Roblox.<br>
+    El sustituto debe seguir las reglas y jugar con respeto.<br><br>
+
+    <strong>Reglas:</strong><br>
+    • No hacer trampas<br>
+    • No toxicidad<br>
+    • Respeto y buena onda<br><br>
+
+    <strong>Contacto:</strong> <a href="mailto:Kirsocontacto@gmail.com">Kirsocontacto@gmail.com</a><br><br>
+
+    ¡Estate atento a las novedades y que gane el mejor!
+  </p>
+</div>
+
+<!-- SCRIPT DE FUNCIONALIDAD -->
+<script>
+  function toggleAccordion(button, panel) {
+    const isActive = button.classList.contains('active');
+    if (isActive) {
+      button.classList.remove('active');
+      panel.classList.remove('show');
+      button.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    } else {
+      button.classList.add('active');
+      panel.classList.add('show');
+      button.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    }
+  }
+
+  document.getElementById('btnTorneos').addEventListener('click', () => {
+    const btn = document.getElementById('btnTorneos');
+    const panel = document.getElementById('panelTorneos');
+    toggleAccordion(btn, panel);
+  });
+
+  document.getElementById('btnKirso').addEventListener('click', () => {
+    const btn = document.getElementById('btnKirso');
+    const panel = document.getElementById('panelKirso');
+    toggleAccordion(btn, panel);
+  });
+
+  // Resalta automáticamente el botón de Proyecto: Kirso el 19 de julio a las 18:00
+  const now = new Date();
+  if (
+    now.getFullYear() === 2025 &&
+    now.getMonth() === 6 &&  // Julio es 6 (0-indexado)
+    now.getDate() === 19 &&
+    now.getHours() === 18
+  ) {
+    document.getElementById('btnKirso').classList.add('destacado');
+  }
+</script>
