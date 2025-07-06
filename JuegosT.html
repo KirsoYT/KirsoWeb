@@ -77,6 +77,30 @@
       }
     }
 
+    /* Botón Torneos (separado abajo) */
+    .btn-torneos {
+      display: block;
+      background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+      color: white;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(96, 165, 250, 0.6);
+      user-select: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 auto 60px auto;
+      width: max-content;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-torneos:hover {
+      background: linear-gradient(90deg, #1d4ed8, #2563eb, #3b82f6);
+      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.8);
+    }
+
     /* Acordeón */
     .accordion, .accordion-proyecto {
       cursor: pointer;
@@ -145,27 +169,6 @@
       padding: 16px 24px;
     }
 
-    /* GameJolt Box */
-    .gamejolt-box {
-      background: #222;
-      color: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      width: 300px;
-      margin: 40px auto;
-    }
-
-    .gamejolt-box a {
-      color: #00ffcc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .gamejolt-box a:hover {
-      text-decoration: underline;
-    }
-
     /* Botón Minecraft */
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -204,8 +207,10 @@
 
   <div class="botones-navegacion">
     <a href="juegos.html" class="btn-nav">Inicio</a>
-    <a href="JuegosT.html" class="btn-nav">Torneos</a>
   </div>
+
+  <!-- Botón Torneos abajo -->
+  <a href="JuegosT.html" class="btn-torneos">Torneos</a>
 
   <!-- Sección Torneos y Proyecto Kirso -->
   <button id="btnTorneos" class="accordion">Torneos</button>
@@ -244,13 +249,6 @@
     </p>
   </div>
 
-  <!-- GameJolt Box -->
-  <div class="gamejolt-box">
-    <h3>Mis juegos en GameJolt</h3>
-    <p>□ ¡Explora mis proyectos, demos y minijuegos!</p>
-    <a href="https://gamejolt.com/@Kirso" target="_blank">➡ Ir a mi perfil</a>
-  </div>
-
   <!-- Botón Minecraft -->
   <a href="InfoMC.html" class="btn-ver">Ver Relacionado a Minecraft</a>
 
@@ -266,27 +264,4 @@
 
     const btnTorneos = document.getElementById('btnTorneos');
     const btnKirso = document.getElementById('btnKirso');
-    const panelTorneos = document.getElementById('panelTorneos');
-    const panelKirso = document.getElementById('panelKirso');
-
-    btnTorneos.addEventListener('click', () => {
-      toggleAccordion(btnTorneos, panelTorneos);
-    });
-
-    btnKirso.addEventListener('click', () => {
-      toggleAccordion(btnKirso, panelKirso);
-    });
-
-    // Resalta automáticamente el botón el 19 de julio a las 18:00
-    const now = new Date();
-    if (
-      now.getFullYear() === 2025 &&
-      now.getMonth() === 6 &&
-      now.getDate() === 19 &&
-      now.getHours() >= 18 && now.getHours() <= 21
-    ) {
-      btnKirso.classList.add('destacado');
-    }
-  </script>
-</body>
-</html>
+   
