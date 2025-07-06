@@ -12,6 +12,35 @@
       padding: 0;
     }
 
+    /* PANEL DE NAVEGACIÓN */
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: sans-serif;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .spacer {
+      height: 30px; /* Espacio entre el navbar y el contenido */
+    }
+
     .container {
       max-width: 900px;
       background: #1f1f35;
@@ -61,6 +90,7 @@
       h1 {
         font-size: 3rem;
       }
+
       .container {
         padding: 30px 25px;
       }
@@ -69,6 +99,17 @@
 </head>
 <body>
 
+  <!-- PANEL DE NAVEGACIÓN -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Noticias.html">Noticias</a>
+    <a href="Aboutme.html">Sobre mí</a>
+  </nav>
+
+  <!-- ESPACIO ENTRE PANEL Y CONTENIDO -->
+  <div class="spacer"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
   <div class="container">
     <h1>Bienvenido a mi espacio digital</h1>
 
@@ -87,3 +128,4 @@
 
 </body>
 </html>
+
