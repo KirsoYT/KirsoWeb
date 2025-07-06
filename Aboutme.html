@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre Kirso</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e0e7ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* PANEL DE NAVEGACIÓN */
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: sans-serif;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .spacer {
+      height: 30px;
+    }
+
+    .contenido-oscuro {
+      background-color: #0f172a;
+      border: 2px solid #1e293b;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px 25px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #22d3ee;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #22d3eeaa;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #cbd5e1;
+      user-select: text;
+    }
+
+    .highlight {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .btn-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .link-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      width: 280px;
+    }
+
+    .link-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .yt-link {
+      background-color: #ef4444;
+    }
+
+    .yt-link:hover {
+      background-color: #dc2626;
+    }
+
+    .discord-link {
+      background-color: #5865F2;
+    }
+
+    .discord-link:hover {
+      background-color: #4752c4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PANEL DE NAVEGACIÓN -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Noticias.html">Noticias</a>
+    <a href="Aboutme.html">Sobre mí</a>
+  </nav>
+
+  <div class="spacer"></div>
+
+  <div class="contenido-oscuro">
+    <h1>Hola, soy Kirso</h1>
+
+    <p>
+      Creo estas cosas por <span class="highlight">diversión</span> y <span class="highlight">aprendizaje</span>. Aunque nadie las vea, me gusta cómo queda todo y disfruto el proceso.
+    </p>
+
+    <p>
+      El equipo detrás de todo esto soy <span class="highlight">solo yo</span>, haciendo todo con dedicación y ganas. Cada proyecto es una oportunidad para crecer y experimentar.
+    </p>
+
+    <p>
+      Gracias por pasarte por aquí y leer un poco sobre mí. Espero que lo que hago te guste tanto como a mí me gusta crearlo.
+    </p>
+
+    <p>
+      También creo juegos y tengo algunos publicados en GameJolt. Puedes verlos en la sección <span class="highlight">Zona de Juegos</span>.
+    </p>
+
+    <div class="btn-container">
+      <a class="link-btn yt-link" href="https://www.youtube.com/@KirsoYT" target="_blank">□ Visita mi canal de YouTube</a>
+      <a class="link-btn discord-link" href="https://discord.gg/RY9YSBaTFW" target="_blank">□ Únete a mi servidor de Discord</a>
+    </div>
+  </div>
+
+</body>
+</html>
