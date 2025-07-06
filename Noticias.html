@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Historial de Noticias - Acordeón</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .accordion {
+      background-color: #2563eb;
+      color: white;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s ease;
+      font-size: 18px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    .accordion:hover {
+      background-color: #1d4ed8;
+    }
+    .active, .accordion:focus {
+      background-color: #1e40af;
+    }
+    .panel {
+      background-color: #1f2937;
+      padding: 15px 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      border-radius: 0 0 8px 8px;
+      color: #cbd5e1;
+      margin-bottom: 15px;
+      user-select: text;
+    }
+    .news-date {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 10px;
+    }
+    .news-summary {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 20px;
+      font-style: italic;
+      user-select: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-bottom: 30px; color: #60a5fa;">Historial de Noticias</h1>
+
+  <button class="accordion">30 de Junio, 2025 - Muchos cambios en la página</button>
+  <div class="panel">
+    <div class="news-date">30 de Junio, 2025</div>
+    <div class="news-summary">
+      Ando haciendo muchos cambios a la página para mejorar la experiencia, agregar nuevas secciones y optimizar el diseño. ¡Pronto habrá más novedades!
+    </div>
+  </div>
+
+  <button class="accordion">29 de Junio, 2025 - Primeras Partes de la Página</button>
+  <div class="panel">
+    <div class="news-date">29 de Junio, 2025</div>
+    <div class="news-summary">
+      Estamos emocionados de anunciar que las primeras partes de la página web están listas para ser exploradas y disfrutadas. Aún queda trabajo por delante, pero este es un gran avance. ¡Gracias por tu paciencia y apoyo!
+    </div>
+  </div>
+
+  <div class="note">
+    Nota: Si se acumulan muchas noticias, se eliminarán las más antiguas por razones de comodidad y para mantener la página ligera.
+  </div>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+      acc.addEventListener("click", () => {
+        acc.classList.toggle("active");
+        const panel = acc.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          accordions.forEach(otherAcc => {
+            if (otherAcc !== acc) {
+              otherAcc.classList.remove("active");
+              otherAcc.nextElementSibling.style.maxHeight = null;
+            }
+          });
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
