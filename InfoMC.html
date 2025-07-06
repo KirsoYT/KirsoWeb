@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundo Bloques - Información</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive, monospace;
+      background-color: #1a1a2e;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .navbar {
+      background-color: #3c8527;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 0 #2e661e;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #fff;
+      text-shadow: 1px 1px #000;
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #2d2d44;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 0 15px #00000080;
+    }
+
+    .title {
+      font-size: 4.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #fbbf24, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.8),
+                   0 0 20px rgba(56, 221, 248, 0.7),
+                   0 0 30px rgba(251, 191, 36, 0.6);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fbbf24;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #93c5fd;
+      font-weight: bold;
+    }
+
+    .important {
+      color: #f87171;
+      font-weight: bold;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+
+    .rules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .rule-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    ul {
+      list-style-type: '✔️ ';
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .horarios-container {
+      max-width: 700px;
+      margin: 50px auto 80px auto;
+      padding: 25px 30px;
+      background-color: #111827;
+      border-radius: 18px;
+      box-shadow: 0 0 20px #0e3b8e88;
+      color: #d1d5db;
+      font-size: 16px;
+      line-height: 1.7;
+      user-select: none;
+    }
+
+    .horarios-container h3 {
+      color: #60a5fa;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .horarios-container ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .horarios-container li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 15px;
+    }
+
+    .horarios-container li::before {
+      content: '⏰';
+      position: absolute;
+      left: 0;
+      color: #38bdf8;
+      font-size: 20px;
+      line-height: 1;
+      top: 2px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      .title {
+        font-size: 3rem;
+      }
+
+      .horarios-container {
+        font-size: 14px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenido principal -->
+  <div class="card">
+    <h1 class="title">□ Mundo Bloques</h1>
+
+    <p>Este es un servidor entre amigos donde siempre encontrarás a alguien con quien jugar. Aquí no hay extraños ni jugadores tóxicos.</p>
+
+    <p>□ <span class="important">Sin lag (o casi nada)</span>: El servidor está optimizado para una experiencia fluida. Si hay algún retraso, será mínimo y momentáneo.</p>
+
+    <p>□ <strong>No te preocupes por los hackers</strong>: El ambiente se mantiene seguro y controlado para que puedas jugar tranquilo.</p>
+
+    <hr style="border: 0; border-top: 1px solid #444; margin: 30px 0;" />
+
+    <h2>□ Sobre el Hosting Casero</h2>
+
+    <p>Este servidor funciona desde una laptop personal, pensada para jugar en grupo con confianza. No es un servidor comercial, sino algo hecho con cariño para amigos y conocidos.</p>
+
+    <p>⏳ <span class="highlight">No es 24/7</span>: Funciona en <strong>horarios específicos</strong>. Si nadie entra, se apaga automáticamente. Si quieres jugar, solo avisa y se prende.</p>
+
+    <p>✅ <span class="highlight">Tu progreso está a salvo</span>, incluso si el servidor se apaga. Se guarda todo antes de cerrarse.</p>
+
+    <p>□️ <span class="highlight">Libre de riesgos externos</span>: No dependemos de servicios comerciales ni de terceros que puedan cerrarlo de forma inesperada.</p>
+
+    <hr style="border: 0; border-top: 1px solid #444; margin: 30px 0;" />
+
+    <h2>□ Reglas del Servidor</h2>
+
+    <div class="rules">
+      <div class="rule-column">
+        <ul>
+          <li>Respeto ante todo</li>
+          <li>No se permiten hacks ni trampas</li>
+          <li>Prohibido el griefing o robo</li>
+          <li>Evita spam o lenguaje ofensivo</li>
+          <li>No compartas datos personales</li>
+        </ul>
+      </div>
+      <div class="rule-column">
+        <ul>
+          <li>Usa el sentido común</li>
+          <li>Reporta errores o bugs al staff</li>
+          <li>Moderadores tienen la última palabra</li>
+          <li>Prohibido duplicar ítems o explotar bugs</li>
+          <li>Solo una cuenta por jugador</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="horarios-container">
+    <h3>⏰ Horarios del Servidor</h3>
+    <ul>
+      <li><strong>Antes del 4 de julio:</strong></li>
+      <li style="padding-left: 40px;">Lunes a viernes – Mañana: 10:00 AM – 1:00 PM</li>
+      <li style="padding-left: 40px;">Lunes a viernes – Tarde: 5:00 PM – 9:00 PM</li>
+      <li style="padding-left: 40px;">Fines de semana: Horarios flexibles</li>
+      <li><strong>Después del 4 de julio (cuando vuelvo a clases):</strong></li>
+      <li style="padding-left: 40px;">Lunes a jueves – Mañana: 7:00 AM – 8:00 AM</li>
+      <li style="padding-left: 40px;">Lunes a jueves – Noche: 8:00 PM – 10:00 PM</li>
+      <li style="padding-left: 40px;">Viernes en la mañana: No hay servidor (excepto casos especiales)</li>
+      <li style="padding-left: 40px;">Fines de semana: Horarios flexibles</li>
+      <li style="padding-left: 40px;"><em>El servidor se prende cuando alguien avisa que quiere jugar</em></li>
+    </ul>
+  </div>
+
+</body>
+</html>
