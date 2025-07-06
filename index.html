@@ -37,8 +37,49 @@
       color: #00ffff;
     }
 
+    /* PANEL ZONA DE JUEGOS */
+    .navbar-juegos-container {
+      background-color: #1e3a8a;
+      padding: 12px 24px;
+      box-shadow: 0 3px 6px #00000080;
+      text-align: center;
+      position: sticky;
+      top: 56px; /* Altura del nav para que quede justo debajo */
+      z-index: 999;
+    }
+
+    .navbar-title {
+      margin: 0 0 12px 0;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 28px;
+      color: #fbbf24;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .navbar-juegos {
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar-juegos a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      background-color: #3b82f6;
+      transition: background 0.3s, color 0.3s;
+      box-shadow: inset 0 -3px 0 #2563eb;
+    }
+
+    .navbar-juegos a:hover,
+    .navbar-juegos a.active {
+      background-color: #60a5fa;
+      color: #000;
+    }
+
     .spacer {
-      height: 30px; /* Espacio entre el navbar y el contenido */
+      height: 30px; /* Espacio entre paneles y contenido */
     }
 
     .container {
@@ -106,6 +147,14 @@
     <a href="Aboutme.html">Sobre mí</a>
   </nav>
 
+  <!-- PANEL ZONA DE JUEGOS -->
+  <div class="navbar-juegos-container">
+    <h1 class="navbar-title">□ Zona de Juegos</h1>
+    <div class="navbar-juegos">
+      <a href="juegos.html" class="active">Ver</a>
+    </div>
+  </div>
+
   <!-- ESPACIO ENTRE PANEL Y CONTENIDO -->
   <div class="spacer"></div>
 
@@ -128,4 +177,3 @@
 
 </body>
 </html>
-
