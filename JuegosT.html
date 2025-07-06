@@ -164,6 +164,7 @@
       font-size: 1rem;
     }
 
+    /* Aquí el truco: abrir los paneles por defecto */
     .panel.show, .panel-proyecto.show {
       max-height: 1200px;
       padding: 16px 24px;
@@ -213,8 +214,8 @@
   <a href="JuegosT.html" class="btn-torneos">Torneos</a>
 
   <!-- Sección Torneos y Proyecto Kirso -->
-  <button id="btnTorneos" class="accordion">Torneos</button>
-  <div id="panelTorneos" class="panel">
+  <button id="btnTorneos" class="accordion active">Torneos</button>
+  <div id="panelTorneos" class="panel show">
     <p>
       ¡Atención! Ya hay un torneo próximo programado.<br>
       Consulta la sección <strong>Proyecto: Kirso</strong> para más detalles.<br>
@@ -225,8 +226,8 @@
     </ul>
   </div>
 
-  <button id="btnKirso" class="accordion-proyecto">Proyecto: Kirso</button>
-  <div id="panelKirso" class="panel-proyecto">
+  <button id="btnKirso" class="accordion-proyecto active">Proyecto: Kirso</button>
+  <div id="panelKirso" class="panel-proyecto show">
     <p>
       ¡Prepárate para el próximo gran torneo en Roblox!<br><br>
 
@@ -252,8 +253,8 @@
   <!-- Botón Minecraft -->
   <a href="InfoMC.html" class="btn-ver">Ver Relacionado a Minecraft</a>
 
-  <!-- Script Acordeón -->
   <script>
+    // Ya no se necesita toggle para abrir/cerrar, pero dejamos para que siga funcionando si quieres cerrar
     function toggleAccordion(button, panel) {
       const isActive = button.classList.contains('active');
       button.classList.toggle('active');
@@ -263,5 +264,18 @@
     }
 
     const btnTorneos = document.getElementById('btnTorneos');
-    const btnKirso = document.getElementById('btnKirso'); 
-   
+    const panelTorneos = document.getElementById('panelTorneos');
+    const btnKirso = document.getElementById('btnKirso');
+    const panelKirso = document.getElementById('panelKirso');
+
+    btnTorneos.addEventListener('click', () => {
+      toggleAccordion(btnTorneos, panelTorneos);
+    });
+
+    btnKirso.addEventListener('click', () => {
+      toggleAccordion(btnKirso, panelKirso);
+    });
+  </script>
+
+</body>
+</html>
