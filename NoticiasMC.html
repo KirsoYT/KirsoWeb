@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Historial de Noticias - NoticiasMC</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      font-family: 'Press Start 2P', cursive, monospace;
+      background: #121212;
+      color: #e0e0e0;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+      user-select: none;
+      text-shadow: 2px 2px 0 #000000cc;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4CAF50;
+      text-shadow:
+        3px 3px 0 #1b5e20,
+        6px 6px 0 #81c784;
+      font-size: 2rem;
+    }
+
+    .accordion {
+      background-color: #3a3a3a;
+      color: #a5d6a7;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      text-align: left;
+      border: 3px solid #4CAF50;
+      outline: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      user-select: none;
+      box-shadow:
+        inset 0 0 10px #81c784aa;
+    }
+
+    .accordion:hover {
+      background-color: #4caf5088;
+      color: #ffffff;
+    }
+
+    .active, .accordion:focus {
+      background-color: #66bb6a;
+      color: #ffffff;
+      border-color: #2e7d32;
+    }
+
+    .panel {
+      background-color: #1b1b1b;
+      padding: 15px 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      border-radius: 0 0 8px 8px;
+      color: #c8e6c9;
+      margin-bottom: 15px;
+      user-select: text;
+      border: 3px solid #4caf50;
+      box-shadow:
+        inset 0 0 12px #4caf5080;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: #81c784;
+      margin-bottom: 10px;
+      font-family: monospace;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    .news-summary {
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: 'Press Start 2P', monospace;
+    }
+
+    .note {
+      font-size: 0.75rem;
+      color: #81c784cc;
+      margin-top: 20px;
+      font-style: italic;
+      user-select: none;
+      text-align: center;
+      text-shadow: 1px 1px 0 #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Historial de Noticias</h1>
+
+  <button class="accordion">✅ ¡Ya no necesitas formulario para entrar!</button>
+  <div class="panel">
+    <div class="news-date">30 de junio de 2025</div>
+    <div class="news-summary">
+      Anteriormente, para poder acceder al servidor, era obligatorio llenar un formulario con tus datos para estar en la whitelist. Esto se hacía como medida de seguridad para evitar que personas desconocidas o ajenas al grupo ingresaran.<br><br>
+
+      Sin embargo, como actualmente el servidor es pequeño y solo está siendo compartido entre amigos cercanos, he decidido <strong>eliminar la restricción del formulario</strong>. Ahora, cualquiera que reciba el enlace directamente podrá entrar, sin necesidad de llenar nada adicional.<br><br>
+
+      Esto facilita el ingreso de nuevos jugadores de confianza y hace todo más simple para quienes quieran invitar a alguien conocido a unirse.<br><br>
+
+      ✨ <strong>Y sí, incluso si eres suscriptor del canal</strong>, también puedes entrar sin problema. El servidor está pensado para jugar chill entre amigos y personas buena onda, así que si recibiste el link, ¡eres bienvenido!<br><br>
+
+      □ Esta decisión fue idea de <strong>mi amigo (que también es OP en el servidor)</strong>. Él me propuso que liberara el acceso para facilitar la entrada de nuevos jugadores y, después de pensarlo bien, me terminó convenciendo. □<br><br>
+
+      ⚠️ <span class="important">Recomendación importante:</span><br>
+      Si en algún momento el servidor empieza a llenarse mucho o se vuelve más conocido, podría activarse nuevamente un sistema de acceso controlado (como volver al formulario o usar bots/moderadores). Esto sería solo para mantener un entorno seguro y evitar problemas como trolls o usuarios malintencionados.<br><br>
+
+      Por ahora, disfruta de la libertad de entrar directamente, invita a quien quieras con confianza, y recuerda seguir las reglas para que el servidor siga siendo un espacio agradable para todos. □□
+    </div>
+  </div>
+
+  <div class="note">
+    Las noticias antiguas podrían eliminarse con el tiempo si se añaden nuevas. Guarda las que te interesen. □️
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const accordions = document.querySelectorAll(".accordion");
+      accordions.forEach(acc => {
+        acc.addEventListener("click", () => {
+          acc.classList.toggle("active");
+          const panel = acc.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            accordions.forEach(otherAcc => {
+              if (otherAcc !== acc) {
+                otherAcc.classList.remove("active");
+                otherAcc.nextElementSibling.style.maxHeight = null;
+              }
+            });
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
