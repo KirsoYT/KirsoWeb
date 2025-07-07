@@ -7,13 +7,12 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0a0a0a; /* Fondo oscuro tipo "espacio profundo" */
+      background-color: #0a0a0a;
       color: #ffffff;
       margin: 0;
       padding: 0;
     }
 
-    /* Título Zona de Juegos */
     .titulo-zona-juegos {
       font-size: 3.5rem;
       font-weight: 900;
@@ -35,7 +34,6 @@
       }
     }
 
-    /* Botones de navegación */
     .botones-navegacion {
       text-align: center;
       margin-bottom: 60px;
@@ -77,7 +75,6 @@
       }
     }
 
-    /* Botón Torneos (separado abajo) */
     .btn-torneos {
       display: block;
       background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
@@ -101,7 +98,6 @@
       box-shadow: 0 6px 15px rgba(37, 99, 235, 0.8);
     }
 
-    /* Acordeón */
     .accordion, .accordion-proyecto {
       cursor: pointer;
       padding: 16px 24px;
@@ -164,41 +160,9 @@
       font-size: 1rem;
     }
 
-    /* Aquí el truco: abrir los paneles por defecto */
     .panel.show, .panel-proyecto.show {
       max-height: 1200px;
       padding: 16px 24px;
-    }
-
-    /* Botón Minecraft */
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-    .btn-ver {
-      display: block;
-      background: linear-gradient(135deg, #5aa748, #3e8e41);
-      color: #fff;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 12px;
-      padding: 14px 28px;
-      border-radius: 4px;
-      text-decoration: none;
-      box-shadow:
-        0 4px 0 #2e5e28,
-        0 0 10px rgba(34, 139, 34, 0.6);
-      transition: all 0.3s ease;
-      user-select: none;
-      cursor: pointer;
-      text-align: center;
-      margin: 30px auto 0 auto;
-      width: max-content;
-    }
-
-    .btn-ver:hover {
-      background: linear-gradient(135deg, #6ac84b, #4da34c);
-      box-shadow:
-        0 6px 0 #2e5e28,
-        0 0 16px rgba(50, 205, 50, 0.8);
-      color: #dfffe2;
     }
   </style>
 </head>
@@ -210,10 +174,8 @@
     <a href="juegos.html" class="btn-nav">Inicio</a>
   </div>
 
-  <!-- Botón Torneos abajo -->
   <a href="JuegosT.html" class="btn-torneos">Torneos</a>
 
-  <!-- Sección Torneos y Proyecto Kirso -->
   <button id="btnTorneos" class="accordion active">Torneos</button>
   <div id="panelTorneos" class="panel show">
     <p>
@@ -250,11 +212,7 @@
     </p>
   </div>
 
-  <!-- Botón Minecraft -->
-  <a href="InfoMC.html" class="btn-ver">Ver Relacionado a Minecraft</a>
-
   <script>
-    // Ya no se necesita toggle para abrir/cerrar, pero dejamos para que siga funcionando si quieres cerrar
     function toggleAccordion(button, panel) {
       const isActive = button.classList.contains('active');
       button.classList.toggle('active');
