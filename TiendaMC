@@ -1,139 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tienda Mundo Bloques</title>
   <style>
     body {
       margin: 0;
-      background-color: #121212;
       font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      user-select: none;
+      background-color: #1a1a2e;
+      color: #ffffff;
     }
 
     .navbar {
       background-color: #3c8527;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
       box-shadow: 0 4px 0 #2e661e;
+      gap: 15px;
     }
 
     .navbar h1 {
       margin: 0;
       font-size: 24px;
       color: #fff;
+      text-shadow: 1px 1px #000;
+      flex-grow: 1;
     }
 
     .navbar a {
       color: #fff;
       background-color: #2e661e;
-      padding: 8px 15px;
       text-decoration: none;
+      padding: 8px 15px;
       border-radius: 6px;
       font-weight: 600;
-      margin-left: 10px;
-      transition: background-color 0.3s;
+      box-shadow: 0 2px 5px #00000080;
     }
 
-    .navbar a:hover {
-      background-color: #4caf50;
-    }
-
-    .tienda-container {
+    .store-container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
     }
 
     .item-card {
-      background-color: #1f2937;
-      border: 2px solid #4caf50;
-      border-radius: 10px;
+      background-color: #2d2d44;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00000080;
       padding: 20px;
-      text-align: center;
-      box-shadow: 0 0 10px #4caf5070;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .item-card img {
-      max-width: 100%;
-      height: 150px;
-      object-fit: contain;
-      margin-bottom: 15px;
+      width: 80px;
+      height: 80px;
     }
 
-    .item-card h3 {
-      margin: 10px 0 5px;
-      font-size: 1.1rem;
-      color: #93f59d;
+    .item-info {
+      flex-grow: 1;
     }
 
-    .item-card p {
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-    .item-card button {
-      background-color: #4caf50;
-      color: #000;
+    .item-title {
+      font-size: 1.2rem;
       font-weight: bold;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      margin-bottom: 8px;
     }
 
-    .item-card button:hover {
-      background-color: #66bb6a;
+    .item-desc {
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+
+    .btn-comprar {
+      background-color: #6b7280;
+      color: #ddd;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: not-allowed;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
+
   <div class="navbar">
-    <h1>□ Tienda Mundo Bloques</h1>
-    <div>
-      <a href="InfoMC.html">Inicio</a>
-      <a href="NoticiasMC.html">Noticias</a>
-      <a href="Tienda.html">Tienda</a>
+    <h1>□ Tienda de Mundo Bloques</h1>
+    <a href="InfoMC.html">Volver</a>
+  </div>
+
+  <div class="store-container">
+    <div class="item-card">
+      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3e/Netherite_Sword_JE3_BE2.png" alt="Espada">
+      <div class="item-info">
+        <div class="item-title">Espada Épica</div>
+        <div class="item-desc">Una espada poderosa para defenderte. 500 GPTCoins.</div>
+      </div>
+      <button class="btn-comprar" disabled>En mantenimiento</button>
+    </div>
+
+    <div class="item-card">
+      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3c/Diamond_Chestplate_JE2_BE2.png" alt="Armadura">
+      <div class="item-info">
+        <div class="item-title">Armadura Diamante</div>
+        <div class="item-desc">Protección máxima en el mundo. 700 GPTCoins.</div>
+      </div>
+      <button class="btn-comprar" disabled>En mantenimiento</button>
+    </div>
+
+    <div class="item-card">
+      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/56/Elytra_JE2_BE2.png" alt="Elytra">
+      <div class="item-info">
+        <div class="item-title">Elytra</div>
+        <div class="item-desc">¡Vuela por el mundo! 1200 GPTCoins.</div>
+      </div>
+      <button class="btn-comprar" disabled>En mantenimiento</button>
     </div>
   </div>
 
-  <div class="tienda-container">
-    <div class="item-card">
-      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/9b/Diamond_Sword_JE3_BE3.png" alt="Espada de diamante">
-      <h3>Espada de Diamante</h3>
-      <p>Una espada poderosa para combatir mobs.</p>
-      <button>Comprar por 25 Coins</button>
-    </div>
-
-    <div class="item-card">
-      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/15/Elytra_JE2_BE2.png" alt="Elytra">
-      <h3>Elytra</h3>
-      <p>¡Vuela como un pájaro por el mundo!</p>
-      <button>Comprar por 75 Coins</button>
-    </div>
-
-    <div class="item-card">
-      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/4c/Golden_Apple_JE3_BE3.png" alt="Manzana Dorada">
-      <h3>Manzana Dorada</h3>
-      <p>Recupera salud y gana ventajas.</p>
-      <button>Comprar por 15 Coins</button>
-    </div>
-
-    <div class="item-card">
-      <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5e/Ender_Pearl_JE2_BE2.png" alt="Perla de Ender">
-      <h3>Perla de Ender</h3>
-      <p>Teletransportación instantánea.</p>
-      <button>Comprar por 10 Coins</button>
-    </div>
-  </div>
 </body>
 </html>
 
