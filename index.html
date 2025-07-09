@@ -2,25 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="5; url=https://kirsoweb.netlify.app" />
-  <title>Redireccionando...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirso Web</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      color: #00ff99;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding-top: 100px;
-      background-color: #f4f4f4;
     }
-    a {
-      color: #0077cc;
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 14px;
+      background-color: #00ff99;
+      color: #000;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00cc77;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>Este sitio se ha mudado a:</h1>
-  <p><a href="https://kirsoweb.netlify.app">https://kirsoweb.netlify.app</a></p>
-  <p>Serás redirigido en unos segundos...</p>
+  <h1>Bienvenido a mi mundo digital</h1>
+  <p>Este es mi espacio personal en la web. Aquí iré subiendo mis proyectos, juegos, ideas y otras locuras. ¡Explora y diviértete!</p>
+
+  <div>
+    <a href="noticias.html" class="button">Noticias</a>
+    <a href="aboutme.html" class="button">Sobre mí</a>
+    <a href="proyectos.html" class="button">Proyectos</a>
+  </div>
+
+  <footer>
+    © 2025 Kirso Web. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
+
